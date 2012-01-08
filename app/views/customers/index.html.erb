@@ -1,0 +1,18 @@
+<h1>List of all customers</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Customer name</th>
+  </tr>
+
+<% @customers.each do |cust| %>
+  <tr>
+    <td><%= cust.id %></td>
+    <td><%= cust.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

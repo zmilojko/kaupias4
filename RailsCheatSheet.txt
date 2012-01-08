@@ -1,0 +1,28 @@
+Project:
+
+Create new project: rails new <project_name>
+To make sure all gems are there: bundle install
+Switch to MySQL:   
+
+  adapter: mysql2
+  host: 127.0.0.1
+  encoding: utf8
+  database: blog_development
+  pool: 5
+  username: root
+  password:
+  socket: mysql.sock
+  
+Instruction to install mysql2: 
+
+http://blog.mmediasys.com/2011/07/07/installing-mysql-on-windows-7-x64-and-using-ruby-with-it/
+
+
+Models:
+
+rails generate model Product
+
+Controllers:
+
+rails generate controller home index
+Default page:   root :to => 'home#index' (in routes.rb)
