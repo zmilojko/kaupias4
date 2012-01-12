@@ -1,7 +1,10 @@
-<h1 id="b">List of all products</h1>
+<h1 class="elpais" id="b">List of all products</h1>
+
+<button class="elpais" id="button" onclick="javascript:buttonclick()">click on me</button>
+
 
 <table class="oscar" style="background-color:#00f;">
-  <tr>
+  <tr class="lines">
     <th onclick="javascript:myproc()">ID</th>
     <th>Product name</th>
     <th>Quantity</th>
@@ -11,7 +14,7 @@
   </tr>
 
 <% @products.each do |product| %>
-  <tr>
+  <tr class="lines" onclick="javascript:showinfo()">
     <td><%= product.id %></td>
     <td><%= product.name %></td>
     <td><%= product.products_quantity %></td>

@@ -13,3 +13,19 @@ function myproc()
   alert("oscar");
   
 }
+
+function myproc2()
+{
+ alert("dostres");
+
+}
+
+function buttonclick()
+{
+$("h1").hide();
+}
+
+function showinfo()
+{
+  alert("mmm how to put some info");
+}
