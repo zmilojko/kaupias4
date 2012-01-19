@@ -1,6 +1,16 @@
-<h1 class="elpais" id="b">List of all products</h1>
+<h1 class="elpais" id="header">List of all products</h1>
 
 <button class="elpais" id="button" onclick="javascript:buttonclick()">click on me</button>
+
+
+<div class="ex">This is how to make a box with text<br><br />
+For some reason the http gets broke because of that br</div>
+
+<button class="start">Start Animation</button>
+<button class="stop" onclick="javascript:stopCount()">Stop Animation</button>
+<br /><br />
+<div class="square" style="background:#98bf21;height:100px;width:100px;position:relative">
+</div>
 
 
 <table class="oscar" style="background-color:#00f;">
@@ -14,7 +24,7 @@
   </tr>
 
 <% @products.each do |product| %>
-  <tr class="lines" onclick="javascript:showinfo()">
+  <tr class="lines" id="theline" onclick="javascript:showinfo()">
     <td><%= product.id %></td>
     <td><%= product.name %></td>
     <td><%= product.products_quantity %></td>

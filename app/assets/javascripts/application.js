@@ -7,6 +7,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+var t;
+var timer_is_on=1;
+
 
 function myproc()
 {
@@ -27,5 +30,52 @@ $("h1").hide();
 
 function showinfo()
 {
-  alert("mmm how to put some info");
+	document.getElementById("theline").collapse()
 }
+
+function weekend()
+{
+var d=new Date();
+var theDay=d.getDay();
+switch (theDay)
+{
+case 5:
+  document.getElementById("button").innerHTML = "Finally Friday";
+  break;
+case 6:
+  document.getElementById("button").innerHTML = "Super Saturday";
+  break;
+case 0:
+  document.getElementById("button").innerHTML = "Sleepy Sunday";
+  break;
+default:
+  document.getElementById("button").innerHTML = "I'm looking forward to this weekend!";
+}
+}
+
+$(document).ready(function(){
+  $(".start").click(function(){
+     timer_is_on = 1;
+     timedCount()
+  });
+});
+
+function timedCount()
+{
+ if (timer_is_on)
+ {
+     $(".square").animate({height:Math.random()*100},"fast");
+     $(".square").animate({width:Math.random()*100},"slow");
+     $(".square").animate({height:Math.random()*100},"fast");
+     $(".square").animate({width:Math.random()*100},"slow");
+     t=setTimeout("timedCount()",1000);
+ }
+}
+
+
+function stopCount()
+{
+clearTimeout(t);
+timer_is_on=0;
+}
+
